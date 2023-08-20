@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+  /* COLORS */
+  --Tomato: hsl(4, 100%, 67%);
+  --GrayPurple: hsl(234, 29%, 20%);
+  --Greyish: hsl(235, 18%, 26%);
+  --Grey: hsl(231, 7%, 60%);
+  --White: hsl(0, 0%, 100%);
+  /* FONT */
+  --DefaultFontFamily: "Roboto", sans-serif;
+  --DefaultFontSize: 1rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--DefaultFontFamily);
+}
+
+body {
+  background-color: var(--Greyish);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+main {
+  max-width: 58rem;
+  display: flex;
+  padding: 1.5rem;
+  background-color: var(--White);
+  border-radius: 1.25rem;
+}
+
+p {
+  font-size: var(--DefaultFontSize);
+}
+
+.main-pic-mobile {
+  display: none;
+}
+
+.left-side {
+  padding: 3.875rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.875rem;
+}
+
+.title {
+  color: var(--GrayPurple);
+  font-size: 3.5rem;
+}
+
+.benefits {
+  color: var(--GrayPurple);
+  display: grid;
+  row-gap: 0.9375rem;
+}
+
+.first-benefit-section,
+.second-benefit-section,
+.third-benefit-section {
+  display: flex;
+  gap: 0.875rem;
+}
+
+form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.label-and-error {
+  display: flex;
+  justify-content: space-between;
+}
+
+.email-label {
+  color: var(--GrayPurple);
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+.error-text {
+  color: var(--Tomato);
+  font-weight: 700;
+  font-size: 0.875rem;
+  visibility: hidden;
+}
+
+.email-input {
+  display: flex;
+  width: 100%;
+  padding: 1.0625rem 0rem 1.0625rem 1.4375rem;
+  border-radius: 0.375rem;
+  border: 0.0625rem solid var(--Grey);
+  outline: none;
+  background-color: var(--White);
+}
+
+.email-input:focus {
+  border: 0.125rem solid var(--Grey);
+}
+
+.submit {
+  cursor: pointer;
+  width: 100%;
+  padding: 1.0625rem 0rem 1.0625rem 0rem;
+  color: var(--White);
+  background-color: var(--GrayPurple);
+  border: none;
+  border-radius: 0.375rem;
+  font-weight: 700;
+}
+
+.submit:hover {
+  background-image: linear-gradient(
+    to right,
+    hsl(335, 60%, 51%),
+    var(--Tomato)
+  );
+  box-shadow: 0rem 0rem 1.5625rem -0.5rem rgba(0, 0, 0, 0.75);
+}
+
+/* THANK YOU PAGE STYLES  */
+.thank-you-wrapper {
+  max-width: 25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 2.5rem 3.125rem;
+  background-color: var(--White);
+  border-radius: 1.25rem;
+  display: none;
+}
+.thank-you-check {
+  max-width: 2.8125rem;
+}
+
+.thank-you-title {
+  color: var(--GrayPurple);
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+}
+
+.thank-you-desc {
+  color: var(--GrayPurple);
+  font-size: 0.875rem;
+  line-height: 1.0625rem;
+}
+.email-result {
+  font-weight: 700;
+}
+
+.dismiss-message {
+  cursor: pointer;
+  width: 100%;
+  padding: 0.8125rem 0rem;
+  color: var(--White);
+  background-color: var(--GrayPurple);
+  border: none;
+  border-radius: 0.375rem;
+  font-weight: 700;
+}
+
+@media (width <= 49.6875rem) {
+  main {
+    max-width: 58rem;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0rem;
+    background-color: var(--White);
+    border-radius: 0rem;
+  }
+
+  .main-pic {
+    display: none;
+  }
+  .main-pic-mobile {
+    display: flex;
+  }
+
+  form {
+    gap: 0.625rem;
+  }
+  .thank-you-wrapper {
+    max-width: 100%;
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20%;
+    padding: 1.25rem;
+    background-color: var(--White);
+    border-radius: 0rem;
+  }
+
+  .dismiss-message {
+    padding: 1.25rem 0rem;
+  }
+}
